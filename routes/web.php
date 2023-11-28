@@ -15,7 +15,33 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('listings',['heading'=>'lastestlisting']);
+    return view('listings',
+    ['heading'=>'Lastest Listing',
+'listings'=>[
+    [
+        'id'=>1,
+        'title'=>'frontend',
+        'description'=>'Conduct user research to understand user needs, behaviors, and pain points.
+        Create user personas, user flows, and journey maps to inform design decisions.
+        Design wireframes, prototypes, and visual assets for web and mobile applications.
+        Collaborate with developers to ensure the implementation of designs meets usability and visual standards.
+        Iterate on designs based on user feedback, usability testing, and data analysis.
+        Stay up-to-date with industry trends and best practices in UI/UX design.
+        Contribute to the development and maintenance of design systems and style guides.'
+    ],
+    [
+        'id'=>2,
+        'title'=>'ui/ux',
+        'description'=>'Conduct user research to understand user needs, behaviors, and pain points.
+        Create user personas, user flows, and journey maps to inform design decisions.
+        Design wireframes, prototypes, and visual assets for web and mobile applications.
+        Collaborate with developers to ensure the implementation of designs meets usability and visual standards.
+        Iterate on designs based on user feedback, usability testing, and data analysis.
+        Stay up-to-date with industry trends and best practices in UI/UX design.
+        Contribute to the development and maintenance of design systems and style guides.'
+    ]
+
+]]);
 });
 // Route::get ('post/{id}',function($id){
 //     return response('post'.$id);
