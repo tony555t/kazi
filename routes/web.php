@@ -32,6 +32,6 @@ route::put ('post/{$id}',function($id){
 })->where ('id','[0-9]+');
 
 route::get('/search',function(Request $request){
-    dd($request);
+    return $request->name.''.$request->city;
 
 });

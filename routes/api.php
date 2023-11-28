@@ -12,7 +12,19 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "api" middleware group. Make something great!
 |
-*/
+*/ 
+Route::get('/posts',function(){
+    return response()->json([
+        'posts'=>[
+        [
+        'title'=>'post one',
+        'age'=>25,
+        'city'=>'Riyadh'
+        ]
+        ]
+    
+    ]);
+});
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
